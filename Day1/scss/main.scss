@@ -1,0 +1,432 @@
+@import 'partials/variables';
+@import 'partials/mixin';
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100%;
+}
+
+.center-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+//NavBar
+
+.nav{
+    background-color: $bg-gray;
+}
+
+.nav-item{
+    @include flex-items;
+    height: 84px;
+}
+
+.buttons{
+    @include flex-items;
+}
+
+.button{
+    width: 91px;
+    height: 40px;
+    padding: 10px 20px;
+}
+
+.primary-button{
+    @include button-text;
+    background-color: $primary-color;
+    color: $secondry-color;
+    border-radius: 6px;
+
+}
+
+.secondry-button{
+    @include button-text;
+    background-color: transparent;
+    color: $primary-color;
+}
+
+.list{
+    @include list-item;
+    display: flex;
+    gap: 50px;
+}
+
+// Section 1
+
+.sec-1{
+    background-color: $bg-gray;
+}
+
+.cont-1{
+    @include flex-items;
+    padding: 96px 0px;
+}
+
+.desc{
+    width: 657px;
+    height: 276px;
+    gap: 32px;
+}
+
+.heading1{
+    line-height: 76px;
+    font-weight: 600;
+    font-size: 64px;
+    color: $heading-color;
+}
+
+.highlight-content{
+    color: $primary-color;
+}
+
+.body-1{
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 32px;
+    color: $body-color;
+}
+
+.button-1{
+    border-radius: 4px;
+    padding: 14px 32px;
+    gap: 10px;
+    height: 52px;
+    width: 128px;
+}
+
+.img1{
+    width: 391px;
+    height: 407px;
+}
+
+// Section 2
+
+.sec2{
+    margin-top: 40px;
+}
+
+.desc2{
+    width: 1110px;
+    height: 76px;
+}
+
+.heading2{
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+    text-align: center;
+    color: $heading-color;
+}
+
+.body2{
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $body-color;
+}
+
+.clients{
+    width: 1152px;
+    height: 98px;
+    margin: 0px auto;
+}
+
+.clients ul{
+    @include list-item;
+    @include flex-items;
+    margin-top: 84px;
+    gap: 40px;
+    
+}
+
+.clients ul li img{
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.desc-3{
+    width: 1440px;
+    height: 120px;
+}
+
+.community{
+    @include flex-items;
+    width: 1440px;
+    height: 280px;
+}
+
+.community-item{
+    width: 299px;
+    height: 260px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    padding: 24px 32px;
+    gap: 8px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.heading3{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    color: $heading-color;
+}
+
+.body3{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.community div img{
+    width: 65px;
+    height: 56px;
+}
+
+// Section 3 & 5
+
+.spending{
+    @include flex-items;
+}
+
+.img10{
+    width: 442px;
+    height: 433px;
+}
+
+.desc3{
+    width: 661px;
+    height: 288px;
+    gap: 32px;
+    padding: 144px;
+}
+
+.heading4{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: $heading-color;
+}
+
+.body4{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $body-color;
+}
+
+.button-2{
+    width: 151px;
+    height: 52px;
+    border-radius: 4px;
+    padding: 14px 32px;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+// Section 6
+
+.sec6{
+    background-color: $bg-gray;
+}
+
+.tim-smith{
+    @include flex-items;
+    width: 1440px;
+    height: 390px;
+    padding: 32px 144px;
+    gap: 78px;
+}
+
+.img12{
+    width: 326px;
+    height: 326px;
+    border-radius: 8px;
+}
+
+.desc-6{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $body-color;
+}
+
+.tim{
+    color: $primary-color;
+    font-weight: 600px;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 8px 0px;
+}
+
+.clients-2{
+    width: 748px;
+    height: 48px;
+    margin-top: 32px;
+}
+
+.clients-2 ul{
+    @include list-item;
+    @include flex-items;
+    gap: 32px;
+    
+}
+
+.clients-2 ul li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.clients-2 ul li h2{
+    color: $primary-color;
+}
+
+
+//Section 8
+
+.sec-8{
+    background-color: $bg-gray;
+}
+
+.desc-8{
+    width: 1440px;
+    height: 300px;
+    padding: 32px;
+    gap: 32px;
+    text-align: center;
+}
+
+.heading8{
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 76px;
+    color: #263238;
+    margin-bottom: 32px;
+}
+
+.button8{
+    width: 178px;
+    height: 52px;
+    border-radius: 4px;
+    border: none;
+    padding: 14px 32px;
+    gap: 8px;
+}
+
+//Footer
+
+.foot{
+    height: 328px;
+    padding: 64px 165px;
+    gap: 125px;
+    background-color: #263238;
+    color: $bg-gray;
+}
+
+.foot-content{
+    @include flex-items;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.foot-logo{
+    width: 350px;
+    height: 190px;
+    gap: 40px;
+}
+
+.pages{
+    @include flex-items;
+    gap: 30px;
+}
+
+.pages ul{
+    @include list-item;
+}
+
+.pages ul li{
+    margin: 12px 0px;
+}
+
+.pages h1{
+    margin-bottom: 24px;
+}
+
+.companys{
+    gap: 24px;
+}
+
+.supports{
+    gap: 12px;
+}
+
+.email{
+    gap: 24px;
+    height: 92px;
+}
+
+.mg{
+    margin: 40px 0px;
+}
+
+// Section 7
+
+.sec7{
+    height: 506px;
+    gap: 16px;
+    text-align: center;
+    margin-top: 48px;
+}
+
+.img-container{
+    @include flex-items;
+}
+
+.img-item{
+    @include relative;
+    width: 368px;
+    height: 366px;
+    margin-top: 16px;
+}
+
+.img-item h3{
+    color: $primary-color;
+    margin-top: 8px;
+}
+
+.img-item img{
+    width: 368px;
+    height: 286px;
+    border: none;
+    border-radius: 8px;
+}
+
+.img-desc{
+    @include absolute;
+    width: 317px;
+    height: 176px;
+    border-radius: 8px;
+    padding: 16px;
+    gap: 16px;
+    top: 150px;
+    background-color: $bg-gray;
+    left: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+
