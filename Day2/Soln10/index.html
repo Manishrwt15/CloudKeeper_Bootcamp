@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 10</title>
+    <style>
+        #table{
+            margin: 10% auto;
+            font-size: 24px;
+        }
+
+        #table td{
+            padding: 4px 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <Button id="add">Add</Button>
+        <table id="table" border="1">
+            <thead>
+                <tr>
+                    <td>Student Name</td>
+                    <td>Math</td>
+                    <td>Physics</td>
+                    <td>Chemistry</td>
+                    <td>English</td>
+                    <td>Physical Education</td>
+                    <td>Average Marks</td>
+                    <td>Total Marks</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.getElementById("add").addEventListener("click",() => {
+            var name = prompt('Enter your name');
+            var sub1 = Number(prompt('Enter your math marks'));
+            var sub2 = Number(prompt('Enter your physics marks'));
+            var sub3 = Number(prompt('Enter your chemistry marks'));
+            var sub4 = Number(prompt('Enter your english marks'));
+            var sub5 = Number(prompt('Enter your physical education marks'));
+
+            if(!name || isNaN(sub1) || isNaN(sub2) || isNaN(sub3) || isNaN(sub4) || isNaN(sub5)) return alert('Please fill all details correctly')
+
+            var sum = sub1 + sub2 + sub3 + sub4 + sub5;
+            var avgMark = sum / 5;
+            
+            var person = {name, sub1, sub2, sub3, sub4, sub5, avgMark, sum};
+
+            var data = JSON.parse(localStorage.getItem("people")) || [];
+            data.push(person);
+
+            localStorage.setItem("people",JSON.stringify(data));
+
+            updateTable();
+        });
+
+        function updateTable(){
+            var data = JSON.parse(localStorage.getItem("people")) || [];
+            const tbody = document.querySelector('table tbody');
+            tbody.innerHTML ="";
+
+            data.forEach(person => {
+                var row = document.createElement('tr');
+
+                row.innerHTML = 
+                    `<td>${person.name}</td>
+                        <td>${person.sub1}</td>
+                        <td>${person.sub2}</td>
+                        <td>${person.sub3}</td>
+                        <td>${person.sub4}</td>
+                        <td>${person.sub5}</td>
+                        <td>${person.avgMark}</td>
+                        <td>${person.sum}</td>
+                    `;
+                tbody.appendChild(row);
+            });
+
+        }
+
+        window.addEventListener("DOMContentLoaded",updateTable);
+    </script>
+</body>
+</html>

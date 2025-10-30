@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 1</title>
+    <style>
+
+        form{
+            display: flex;
+            flex-direction: column;
+            background-color: grey;
+            width: 50vw;
+            height: 50vh;
+            margin: 10% auto;
+            padding: 12px;
+            gap: 40px;
+            align-items: center;
+        }
+
+        label{
+            font-size:x-large;
+            padding: 0px 12px;
+        }
+
+        input{
+            margin: 0px 20%;
+            height: 50px;
+            text-align: center;
+        }
+
+        #btn{
+            background-color: red;
+            width:fit-content;
+            height: 60px;
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <label for="age">Age</label>
+        <input type="text" id="age" placeholder="Enter your age">
+
+        <button id="btn" type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById("btn").addEventListener("click",(e) => {
+        
+            var userName = document.getElementById("name").value.trim();
+            var age = document.getElementById("age").value;
+            e.preventDefault();
+            if(userName.length == 0) return alert('Please enter your Name');
+            if(age.length == 0) return alert('Please enter your age');
+            (age >=18) ? alert('Form is Submit') : alert('Age should be not less than 18');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 2</title>
+</head>
+<body>
+    <div style="background-color: gray; margin: 10px auto; text-align: center; " id="container">
+        <h1>Hello World</h1>
+    </div>
+    <script>
+
+        document.getElementById("container").addEventListener("mouseover",() => {
+            document.getElementById("container").style.backgroundColor = "red";
+        })
+        document.getElementById("container").addEventListener("mouseout",() => {
+            document.getElementById("container").style.backgroundColor = "grey";
+        })
+    </script>
+</body>
+</html>
