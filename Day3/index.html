@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment Day 3</title>
+
+    <style>
+        body {
+            margin: 0px auto;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        #container {
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .card {
+            width: 220px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+            transition: 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+    <div id="container"></div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
