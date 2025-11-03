@@ -440,4 +440,66 @@
   line-height: 28px;
 }
 
+.numbers {
+  background-color: #F5F7FA;
+  height: 288px;
+}
+
+.sec4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 144px;
+}
+
+.desc4 {
+  width: 540px;
+  height: 120px;
+  gap: 8px;
+}
+
+.heading4 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #4D4D4D;
+}
+
+.sec4 p {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.grid {
+  width: 540px;
+  height: 160px;
+  gap: 40px;
+}
+
+.grid-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 12px;
+}
+
+.grid-items h1 {
+  color: #4D4D4D;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.grid-items p {
+  color: #717171;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.grid-desc {
+  margin-left: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
