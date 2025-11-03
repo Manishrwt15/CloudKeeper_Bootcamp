@@ -29,6 +29,7 @@ heading.innerText = 'Price of costliest product is ' + costliest;
 document.body.insertBefore(heading,container);
 
 
+
 products.map(item => {
     var card = document.createElement('div');
 
@@ -49,7 +50,7 @@ products.map(item => {
     card.addEventListener("mouseout",function() {
         card.style.transform = "scale(1)";
         card.style.boxShadow = "none";
-        card.style.backgroundColor = "#dcdcdc"; 
+        card.style.backgroundColor = "#ffffffff"; 
     });
 
     container.appendChild(card);
