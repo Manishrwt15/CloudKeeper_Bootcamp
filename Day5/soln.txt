@@ -1,0 +1,90 @@
+1 => Find and terminate the top memory-consuming process on your system.
+ps aux -sort=%-mem | head -2 // decending m top memory consuming process ko nikalo
+sudo kill PID // PID -> process id.
+
+
+2 =>Create a user named devops and grant them sudo privileges.
+sudo adduser devops // user add with name devops
+sudo usermod -aG sudo devops // add user in sudo group
+
+
+3 => Connect to a remote server, create a directory, and copy files into it using SCP.
+sudo ssh mohit-bisht@10.1.210.46
+pass manish-rawat : ************
+cd Desktop
+mkdir temp
+exit
+scp /home/manish-rawat/Desktop/fileSend.txt mohit-bisht@10.1.210.46:/home/mohit-bisht/Desktop/temp/
+mohit-bisht@10.1.210.46 password : *********
+
+
+4 => List all active processes and save only those containing the word java into a file.
+ps aux | grep java > java_processes.txt
+
+5 => Generate an SSH key pair and configure it for two different remote servers.
+
+
+6 => Find all lines containing “error” in /var/log/syslog and redirect them to errors_found.txt
+grep -i "error" /var/log/syslog > errors_found.txt
+
+7 => Find all .conf files in /etc, sort them alphabetically, and save to conf_list.txt.
+find /etc -type f -name "*.conf" | sort > conf_list.txt 
+
+8 => Display the total number of unique shell types listed in /etc/passwd and save to shell_count.txt
+cut -d: -f7 /etc/passwd | uniq | wc -l > shell_count.txt
+
+9 => Explore vi/vim for  Creating a text file. Understand cursor movement, switching input mode (append, insert etc), deleting command, pasting content, undo , redo ,search , save and quit operations in vim.
+vim myfile.txt   // open/create file
+
+i - insert 
+a - append 
+o - new line
+Esc - back to normal mode
+
+h - left  
+l - right  
+j - down
+k - up
+dd - delete line
+yy - copy line
+p - paste
+u - undo
+Ctrl+r - redo
+
+/word - search
+n - next
+:w - save
+:q - quit
+:wq - save & quit
+:q! - force quit
+
+
+10 => Reset the current user password and reboot the system form shell.
+whoami
+passwd
+sudo reboot
+
+11 => Zip the content of your home directory via tar and send it via scp to other person laptop. Unzip the content on other person laptop via tar.
+
+
+12 => Install and setup application via apt - mysql, postman, docker, dbeaver
+mysql 
+sudo apt update
+sudo apt install mysql-server -y
+
+postman
+sudo apt update
+sudo snap install postman
+
+docker
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+sudo apt install docker-ce -y
+
+dbeaver
+wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
+echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
+sudo apt update
+sudo apt install dbeaver-ce -y

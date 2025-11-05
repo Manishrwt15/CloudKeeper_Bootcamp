@@ -21,7 +21,7 @@ console.log(number);
 
 // Soln 6
 
-var nums = [1,2,3,4,5,6,7];
+var nums = [1,2,3,4,5,6,7,3,4,3,6];
 var numsUpdate = nums.map(num => num +2);
 console.log("soln 6")
 console.log(numsUpdate);
