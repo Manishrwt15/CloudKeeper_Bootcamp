@@ -1,3 +1,6 @@
 Hello from main branch
+changed my f2 branch (conflicting)
+Additional line from branch f2
+Hello from main branch
 changed my f1 branch
 Additional line from branch f1
