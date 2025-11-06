@@ -1,2 +1,3 @@
-Hello my name is Manish Rawat
-Welcome to the Github Demo Repo
+Hello from main branch
+changed my f2 branch (conflicting)
+Additional line from branch f2
