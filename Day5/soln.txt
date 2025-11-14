@@ -65,7 +65,9 @@ passwd
 sudo reboot
 
 11 => Zip the content of your home directory via tar and send it via scp to other person laptop. Unzip the content on other person laptop via tar.
-
+tar -czvf home_backup.tar.gz ~/                                   // this command for compress home directory
+scp home_backup.tar.gz ubuntu@192.168.1.20:/home/ubuntu           //  scp s connection bna k user k home m use send krdo
+tar -xzvf home_backup.tar.gz -C /home/ubuntu/extracted_home/      //  extract kro ab us zip ko user k system m
 
 12 => Install and setup application via apt - mysql, postman, docker, dbeaver
 mysql 
